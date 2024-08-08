@@ -15,8 +15,9 @@ TextStyle bodyText = GoogleFonts.poppins(
   color: Colors.white,
 );
 Color lightb = Color(0xFF078FD7);
-
-
+Color deepb = Color(0xFF0D2475);
+Color lightpurp = Color(0xFFCCD2E6);
+Color deeppurp = Color(0xFF6076BF);
 
 // SizedBox appButton = SizedBox(
 //   height: ScreenSizeMixin(h * 0.08),

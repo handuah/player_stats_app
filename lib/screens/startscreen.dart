@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:player_stats_app/navigationWidget.dart';
 import 'package:player_stats_app/utils.dart';
 
 class Startscreen extends StatefulWidget {
@@ -95,7 +96,14 @@ class _StartscreenState extends State<Startscreen> {
                   height: h * 0.08,
                   width: w,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Navigationwidget(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Get Started',
                       style: bodyText.copyWith(
