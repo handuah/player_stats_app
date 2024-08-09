@@ -272,11 +272,12 @@ class _PlayerstatsState extends State<Playerstats> {
                   strokeWidth: h * 0.01,
                 ),
 
-                indications(context),
-                indications(context),
-                indications(context),
-                indications(context),
-                indications(context),
+                indications(context, 'Matches Played', 4),
+                indications(context, 'Minutes Playes', 300),
+                indications(context, 'Goals', 8),
+                indications(context, 'Attempts on Goal', 9),
+                indications(context, 'Top Speed (km/h)', 32),
+                indications(context, 'Distance covered (km)', 13),
                 SizedBox(height: h * 0.04),
               ],
             ),
@@ -286,7 +287,7 @@ class _PlayerstatsState extends State<Playerstats> {
     );
   }
 
-  Widget indications(BuildContext context) {
+  Widget indications(BuildContext context, String catName, int catNum) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Column(
@@ -295,7 +296,8 @@ class _PlayerstatsState extends State<Playerstats> {
       children: [
         SizedBox(height: h * 0.02),
         Text(
-          'Passing Accuracy',
+          // 'Passing Accuracy',
+          catName,
           softWrap: true,
           style: bodyText.copyWith(
             fontWeight: FontWeight.normal,
@@ -316,7 +318,8 @@ class _PlayerstatsState extends State<Playerstats> {
           ),
           child: Center(
             child: Text(
-              '4',
+              // '4',
+              catNum.toString(),
               softWrap: true,
               style: bodyText.copyWith(
                 fontWeight: FontWeight.bold,
